@@ -1,14 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../App.css';
 
 
-class Form extends Component{
+//to view  
+//  no state(stateless componant)
+const Form =(props) =>{
 
-  render(){
     return(
-      <div>Form App</div>
+        <form onSubmit={props.getWeather}>
+            <input type="text"  name="city"placeholder="City..."/>
+            <input type="text" name ="country" placeholder="Country..."/>
+            <button>Get Weather</button>
+         </form>
     )
-  }
+  
 }
 
 

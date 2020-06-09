@@ -6,11 +6,17 @@ import WeatherAPI from './Components/WeatherAPI'
 
 class App extends Component{
 
+
+getWeather=(e)=>{
+  e.preventDefault()
+  console.log("weather")
+}
+
   render(){
     return(
       <div>     
         <div>Weather App</div>
-        <Form />
+        <Form getWeather={this.getWeather} />
         <WeatherAPI /> 
       </div>
 
