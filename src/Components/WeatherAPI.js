@@ -4,40 +4,37 @@ import '../App.css';
 
 const WeatherAPI=(props)=>{
     return(
-                <div className="info">
+        <div className="info">
 
-            {props.temperture && 
-                 <p >Tempreature :
-                     {props.temperture}
-                 </p>
-            }
-            {props.city &&   
-                <p >City : 
-                    {props.city}
-                </p>}
-            {props.country && 
-               <p >Country :   
-                 {props.country}  
-              </p>}
+        {props.temperture && 
+        <p className= "info_key">Tempreature : 
+        <span className="info_value">{props.temperture}</span>
+        </p>}
+        {props.city && 
+        <p className= "info_key">City : 
+        <span className="info_value">{props.city}</span>
+         </p>}
+        {props.country && 
+        <p className= "info_key">Country :
+         <span className="info_value">{props.country}</span>
+        </p>}
+        {props.humidity &&
+         <p className= "info_key">Humidity : 
+         <span className="info_value">    {props.humidity}</span>
+         </p>}
+        {props.description &&
+         <p className= "info_key">Description :
+         <span className="info_value"> {props.description}</span>
+         </p>}
+        {props.error && 
+        <p className= "info_key">Error : 
+        <span className="info_value">{props.error} </span>
+        </p>}
+    
 
-            {props.humidity &&
-                <p >Humidity :
-                      {props.humidity} 
-               </p>}
-
-            {props.description &&
-                <p >Description :
-                     {props.description}
-                 </p>}
-
-            {props.error && 
-                <p >Error :
-                     {props.error}   
-                </p>}
-        
-
-            </div>
-      )
+        </div>
+    )
+      
 } 
    
   

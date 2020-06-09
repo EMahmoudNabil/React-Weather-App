@@ -47,8 +47,10 @@ getWeather= async (e)=>{
 
   render(){
     return(
-      <div>     
-        <div>Weather App</div>
+      <div className="wrapper ">
+      <div className="form-container ">
+
+      <h1 className ="text-center"> Weather APP </h1>
         <Form getWeather={this.getWeather} />
         <WeatherAPI   
           temperture ={this.state.temperture}
@@ -58,6 +60,7 @@ getWeather= async (e)=>{
           description ={this.state.description}
           error = {this.state.error}
         /> 
+      </div>
       </div>
 
     )
