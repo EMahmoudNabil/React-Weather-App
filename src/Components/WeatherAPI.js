@@ -1,15 +1,47 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../App.css';
 
 
-class WeatherAPI extends Component{
-
-  render(){
+const WeatherAPI=(props)=>{
     return(
-      <div>WeatherAPI App</div>
-    )
-  }
-}
+                <div className="info">
+
+            {props.temperture && 
+                 <p >Tempreature :
+                     {props.temperture}
+                 </p>
+            }
+            {props.city &&   
+                <p >City : 
+                    {props.city}
+                </p>}
+            {props.country && 
+               <p >Country :   
+                 {props.country}  
+              </p>}
+
+            {props.humidity &&
+                <p >Humidity :
+                      {props.humidity} 
+               </p>}
+
+            {props.description &&
+                <p >Description :
+                     {props.description}
+                 </p>}
+
+            {props.error && 
+                <p >Error :
+                     {props.error}   
+                </p>}
+        
+
+            </div>
+      )
+} 
+   
+  
+
 
 
 export default WeatherAPI;

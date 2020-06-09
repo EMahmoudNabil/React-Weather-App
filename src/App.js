@@ -23,7 +23,7 @@ getWeather= async (e)=>{
     const country = e.target.elements.country.value;
     const api = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEYS}`);
     const data =await api.json();
-    
+
     if(city && country){
       this.setState({
         temperture :data.main.temp,
@@ -50,7 +50,14 @@ getWeather= async (e)=>{
       <div>     
         <div>Weather App</div>
         <Form getWeather={this.getWeather} />
-        <WeatherAPI /> 
+        <WeatherAPI   
+          temperture ={this.state.temperture}
+          city ={this.state.city}
+          country={this.state.country}
+          humidity ={this.state.humidity}
+          description ={this.state.description}
+          error = {this.state.error}
+        /> 
       </div>
 
     )
